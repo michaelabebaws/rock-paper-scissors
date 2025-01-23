@@ -1,3 +1,5 @@
+const userInput = prompt("Please enter your choice: rock, paper, or scissors");
+
 function getComputerChoice() {
 
 // a random INT will be generated and the condition statement evaluate what to return
@@ -14,4 +16,9 @@ function getComputerChoice() {
         return "scissors"
     }
 }
-console.log(getComputerChoice())
+
+function getHumanChoice() {
+
+}
+
+console.log(userInput)
