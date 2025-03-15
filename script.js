@@ -22,9 +22,15 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     
-    const userInput = prompt("Enter rock, paper, or scissors:").toLowerCase();
-    return userInput;
-}
+    let buttonRock = document.getElementById("buttonRock");
+    console.log(`Round 1:`);
+    const humanSelection = buttonRock;
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    //const userInput = prompt("Enter rock, paper, or scissors:").toLowerCase();
+    //return userInput;
+} 
 
 
 function playRound(humanChoice, computerChoice) {
@@ -50,13 +56,15 @@ function playRound(humanChoice, computerChoice) {
         console.log(`Score - You: ${humanScore}, Computer: ${computerScore}`);
 
 }
+    //adding eventlistener to the buttons
+    const buttonPaper = document.getElementById("buttonPaper");
+    const buttonScissors = document.getElementById("buttonScissors");
 
-    for (let i = 0; i < 5; i++) {
-        console.log(`Round ${i + 1}:`);
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
+    buttonRock = getHumanChoice();
+
+
+    //playround function was here
+    
 
     console.log("Game Over!");
     if (humanScore > computerScore) {
@@ -70,3 +78,5 @@ function playRound(humanChoice, computerChoice) {
 }
 
 playGame();
+
+
